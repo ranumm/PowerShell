@@ -1,6 +1,6 @@
 # run as elevated 
 $menu = 'Open Windows PowerShell Here as Administrator'
-$command = "$PSHOME\powershell.exe -NoExit -NoProfile -Command ""Set-Location '%V'"""
+$command = "$PSHOME\powershell.exe -NoExit -Command ""Set-Location '%V'"""
 
 'directory', 'directory\background', 'drive' | ForEach-Object {
     New-Item -Path "Registry::HKEY_CLASSES_ROOT\$_\shell" -Name runas\command -Force |
